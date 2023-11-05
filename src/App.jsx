@@ -8,14 +8,16 @@ import { BaseColaboradores } from "./js/BaseColaboradores";
 import { useState } from "react";
 function App() {
   const [colaboradores, setColaboradores] = useState(BaseColaboradores);
+  const [listado, setListado] = useState(BaseColaboradores);
   return (
     <div className="App">
-      <Buscador
-        setColaboradores={setColaboradores}
-        colaboradores={BaseColaboradores}
-      />
+      <Buscador setColaboradores={setColaboradores} listado={listado} />
       <Listado colaboradores={colaboradores} />
-      <Formulario />
+      <Formulario
+        listado={listado}
+        setListado={setListado}
+        setColaboradores={setColaboradores}
+      />
       <Alert />
     </div>
   );

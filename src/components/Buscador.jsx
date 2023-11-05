@@ -1,6 +1,6 @@
-export const Buscador = ({ setColaboradores, colaboradores }) => {
+export const Buscador = ({ setColaboradores, listado }) => {
   const buscarColaborador = (e) => {
-    const colaboradoresFilter = colaboradores.filter(
+    const colaboradoresFilter = listado.filter(
       (colaborador) =>
         colaborador.nombre.includes(e.target.value) ||
         colaborador.correo.includes(e.target.value) ||
