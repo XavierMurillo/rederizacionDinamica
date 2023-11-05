@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { BaseColaboradores } from "../js/BaseColaboradores"; 
 
 export const Formulario = () => {
 
@@ -8,9 +9,10 @@ export const Formulario = () => {
     edad:'',
     cargo:'',
     telefono:''
-  })
+  });
+  const [ listado, setListado ] = useState(BaseColaboradores);
 
-  const handleSubmit = () =>{
+  const handleSubmit = (event) =>{
     event.preventDefault();
     let values = Object.values(formulario);
     let flag = 0
@@ -20,12 +22,17 @@ export const Formulario = () => {
       }else {
         flag = 0
       }
-    })
+    });
     if(flag ==1){
       alert("Completa todos los datos!")
     }
     else{
-
+      console.log("AA")
+      setListado([
+        ...listado,
+        formulario,
+      ])
+      console.log(listado);
     }
   };
 
