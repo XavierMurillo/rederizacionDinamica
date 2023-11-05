@@ -15,13 +15,13 @@ function App() {
     <div className="App container-fluid">
       <h1 className="d-flex">Lista de colaboradores</h1>
       <div className="row">
-        <div className="col-12 col-lg-6">
+        <div className="col-12 col-lg-8">
           <div className="lista-container">
             <Buscador setColaboradores={setColaboradores} listado={listado} />
             <Listado colaboradores={colaboradores} />
           </div>
         </div>
-        <div className="col-12 col-lg-6">
+        <div className="col-12 col-lg-4">
           <div className="d-flex justify-content-center mx-auto">
             <Formulario
               listado={listado}

@@ -6,14 +6,21 @@
 .buscador {
   margin-bottom: 1rem;
   display: flex;
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 30vw;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
 }
 
-.form input{
+.form input {
   margin-bottom: 1rem;
   border-radius: 5px;
-  border: solid 1px lightblue;
+  border: solid 1px gray;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
 }
