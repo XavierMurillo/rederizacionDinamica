@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Listado } from "./components/Listado";
 import { Formulario } from "./components/Formulario";
 import { Buscador } from "./components/Buscador";
-import { Alerta } from "./components/Alert";
+import { Alert } from "./components/Alert";
 import { BaseColaboradores } from "./js/BaseColaboradores";
 import { useState } from "react";
 function App() {
@@ -22,7 +22,7 @@ function App() {
         setAlertaMensaje={setAlertaMensaje}
         setAlertaColor={setAlertaColor}
       />
-      <Alerta alertaMensaje={alertaMensaje} alertaColor={alertaColor} />
+      <Alert alertaMensaje={alertaMensaje} alertaColor={alertaColor} />
     </div>
   );
 }
