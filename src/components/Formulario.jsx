@@ -16,14 +16,17 @@ export const Formulario = ({ listado, setListado, setColaboradores }) => {
     event.preventDefault();
     let values = Object.values(formulario);
     let flag = 0;
+    let flag_list = [];
     values.forEach((value) => {
       if (value.length < 1) {
         flag = 1;
       } else {
         flag = 0;
       }
+      flag_list.push(flag)
     });
-    if(flag ==1){
+    flag_list.shift();
+    if(flag_list.includes(1)){
       alert("Completa todos los datos!")
     }
     else{
