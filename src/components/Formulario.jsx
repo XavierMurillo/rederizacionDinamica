@@ -93,7 +93,7 @@ export const Formulario = ({
           value={formulario.telefono}
           onChange={handleOnChange}
         />
-        <button>Agregar colaborador</button>
+        <button className="btn btn-primary">Agregar colaborador</button>
       </form>
     </div>
   );
