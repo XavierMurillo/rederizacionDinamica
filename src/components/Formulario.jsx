@@ -3,7 +3,9 @@ import { BaseColaboradores } from "../js/BaseColaboradores";
 
 export const Formulario = () => {
 
-  const [formulario, setFormulario] = useState({
+  const [id, setId] = useState(4);
+  const [formulario, setFormulario] = useState({ 
+    id:id,
     nombre:'',
     email:'',
     edad:'',
@@ -27,10 +29,10 @@ export const Formulario = () => {
       alert("Completa todos los datos!")
     }
     else{
-      console.log("AA")
+      setId(id+1);
       setListado([
         ...listado,
-        formulario,
+        {...formulario,id: id.toString()},
       ])
       console.log(listado);
     }
