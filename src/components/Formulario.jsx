@@ -1,7 +1,12 @@
 import { useState } from "react";
 
-export const Formulario = ({ listado, setListado, setColaboradores }) => {
-
+export const Formulario = ({
+  listado,
+  setListado,
+  setColaboradores,
+  setAlertaMensaje,
+  setAlertaColor,
+}) => {
   const [id, setId] = useState(4);
   const [formulario, setFormulario] = useState({
     id: "",
@@ -17,26 +22,21 @@ export const Formulario = ({ listado, setListado, setColaboradores }) => {
     let values = Object.values(formulario);
     let flag = 0;
     values.forEach((value) => {
-      if (value.length < 1) {
+      if (value == "") {
         flag = 1;
-      } else {
-        flag = 0;
       }
     });
-    if(flag ==1){
-      alert("Completa todos los datos!")
+    console.log(flag);
+    if (flag == 1) {
+      setAlertaMensaje("Completa todos los campos!");
+      setAlertaColor("danger");
+    } else {
+      setId(id + 1);
+      setListado([...listado, { ...formulario, id: id.toString() }]);
+      setColaboradores([...listado, formulario]);
+      setAlertaMensaje("Colaborador Agregado!");
+      setAlertaColor("success");
     }
-    else{
-      setId(id+1);
-      setListado([
-        ...listado,
-        {...formulario,id: id.toString()},
-      ])
-      setColaboradores([
-        ...listado,
-        formulario,
-      ])
-  };
   };
 
   const handleOnChange = (event) => {
@@ -46,7 +46,7 @@ export const Formulario = ({ listado, setListado, setColaboradores }) => {
 
     setFormulario({
       ...formulario,
-      [nombreinput]:valorinput,
+      [nombreinput]: valorinput,
     });
   };
 

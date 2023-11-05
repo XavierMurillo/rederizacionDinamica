@@ -8,7 +8,6 @@ export const Buscador = ({ setColaboradores, listado }) => {
         colaborador.cargo.includes(e.target.value) ||
         colaborador.telefono.includes(e.target.value)
     );
-    console.log(colaboradoresFilter);
     setColaboradores(colaboradoresFilter);
   };
   return (
