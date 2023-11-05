@@ -92,7 +92,7 @@ export const Formulario = ({ listado, setListado, setColaboradores }) => {
           value={formulario.telefono}
           onChange={handleOnChange}
         />
-        <button>Agregar colaborador</button>
+        <button className="btn btn-primary">Agregar colaborador</button>
       </form>
     </div>
   );
