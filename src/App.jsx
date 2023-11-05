@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Buscador
         setColaboradores={setColaboradores}
-        colaboradores={colaboradores}
+        colaboradores={BaseColaboradores}
       />
       <Listado colaboradores={colaboradores} />
       <Formulario />
