@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.buscador {
+  margin-bottom: 1rem;
+  display: flex;
+}
 .form{
   display: flex;
   flex-direction: column;
